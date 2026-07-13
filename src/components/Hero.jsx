@@ -231,7 +231,7 @@ export default function Hero() {
             </span>
           </button>
           <a
-            href="https://github.com"
+            href="https://github.com/SyedaMahnoorIslam"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-text-secondary hover:text-white transition-colors"

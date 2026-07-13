@@ -103,8 +103,8 @@ export default function Certifications() {
         <div className="mt-10 text-center">
           <p className="text-text-secondary text-sm">
             Always learning. Currently exploring{' '}
-            <span className="text-purple-400 font-medium">LLM Engineering</span> and{' '}
-            <span className="text-cyan-400 font-medium">Advanced System Design</span>.
+            <span className="text-purple-400 font-medium">Backend Development</span> and{' '}
+            <span className="text-cyan-400 font-medium">AI-powered applications</span>.
           </p>
         </div>
       </div>

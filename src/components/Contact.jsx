@@ -318,7 +318,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onFocus={() => setFocused('phone')}
                       onBlur={() => setFocused(null)}
-                      className="form-input bg-black border-0 border-r border-black px-3 py-3 text-sm outline-none cursor-pointer flex-shrink-0 appearance-none pr-7 pl-3"
+                      className="form-input bg-gray-800 border-0 border-r border-black px-3 py-3 text-sm outline-none cursor-pointer flex-shrink-0 appearance-none pr-7 pl-3"
                       style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238b949e' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 6px center', backgroundSize: '14px' }}
                     >
                       <option value="+92">🇵🇰 +92</option>
@@ -426,7 +426,7 @@ export default function Contact() {
 
               {/* Bottom note */}
               <p className="mt-4 text-xs text-center text-text-muted">
-                No spam. I typically respond within 24 hours.
+                I typically respond within 24 hours.
               </p>
             </div>
           </div>

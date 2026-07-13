@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const CATEGORIES = [
   { key: 'frontend', label: 'Frontend', color: '#a855f7', icon: '🎨' },
   { key: 'backend', label: 'Backend', color: '#06b6d4', icon: '⚙️' },
-  { key: 'aiml', label: 'AI & ML', color: '#ec4899', icon: '🤖' },
+  { key: 'qa', label: 'QA & Testing', color: '#ec4899', icon: '🧪' },
   { key: 'tools', label: 'Tools', color: '#f59e0b', icon: '🛠️' },
 ];
 
@@ -140,12 +140,14 @@ export default function Skills() {
 
         {/* Category cards */}
         <div ref={cardsRef} className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-16">
-          {CATEGORIES.map(({ key, label, color, icon }) => (
-            <div
-              key={key}
-              className="cat-card glass-card p-6 gradient-border group opacity-0"
-              style={{ '--cat-color': color }}
-            >
+          {CATEGORIES.map(({ key, label, color, icon }) => {
+            const categorySkills = skills[key] || [];
+            return (
+              <div
+                key={key}
+                className="cat-card glass-card p-6 gradient-border group opacity-0"
+                style={{ '--cat-color': color }}
+              >
               {/* Header */}
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2">
@@ -153,13 +155,13 @@ export default function Skills() {
                   <span className="text-sm font-bold text-white">{label}</span>
                 </div>
                 <span className="text-xs font-mono px-2 py-1 rounded-full bg-white/5" style={{ color }}>
-                  {skills[key].length} skills
+                  {categorySkills.length} skills
                 </span>
               </div>
 
               {/* Skills */}
               <div className="space-y-3">
-                {skills[key].slice(0, 5).map((skill, i) => (
+                {categorySkills.slice(0, 5).map((skill, i) => (
                   <SkillBar
                     key={skill.name}
                     name={skill.name}
@@ -171,9 +173,9 @@ export default function Skills() {
               </div>
 
               {/* Remaining count */}
-              {skills[key].length > 5 && (
+              {categorySkills.length > 5 && (
                 <div className="mt-4 text-xs text-center" style={{ color: `${color}99` }}>
-                  +{skills[key].length - 5} more
+                  +{categorySkills.length - 5} more
                 </div>
               )}
 
@@ -183,7 +185,7 @@ export default function Skills() {
                 style={{ background: color }}
               />
             </div>
-          ))}
+          )})}
         </div>
 
         {/* Tech ecosystem marquee */}

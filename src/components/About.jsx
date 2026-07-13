@@ -204,7 +204,7 @@ export default function About() {
               <div className="space-y-3">
                 {[
                   { icon: '📍', label: 'Location', value: personalInfo.location },
-                  { icon: '💼', label: 'Experience', value: '2+ Years' },
+                  { icon: '💼', label: 'Experience', value: '1+ Years' },
                   { icon: '🎓', label: 'Education', value: 'BS Computer Science' },
                   { icon: '🌍', label: 'Languages', value: 'English, Urdu' },
                 ].map(({ icon, label, value }) => (
@@ -248,7 +248,7 @@ export default function About() {
         >
           {[
             { target: 15, suffix: '+', label: 'Projects Completed', icon: '🚀' },
-            { target: 2, suffix: '+', label: 'Years Experience', icon: '⏰' },
+            { target: 1, suffix: '+', label: 'Years Experience', icon: '⏰' },
             { target: 10, suffix: '+', label: 'Technologies', icon: '💻' },
             { target: 100, suffix: '%', label: 'Dedication', icon: '🔥' },
           ].map(({ target, suffix, label, icon }) => (

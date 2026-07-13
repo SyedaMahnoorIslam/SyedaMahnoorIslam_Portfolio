@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { experience, education } from '../data/portfolio';
+import { experience, education ,achievements} from '../data/portfolio';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -216,16 +216,12 @@ export default function Experience() {
               </div>
 
               <div className="space-y-3">
-                {[
-                  { icon: '🏆', title: 'Hackathon Winner', detail: 'National Coding Competition 2023 — 1st Place' },
-                  { icon: '⭐', title: 'Open Source Contributor', detail: 'Active contributions to React & Node.js ecosystem' },
-                  { icon: '🥇', title: 'Best Developer Project', detail: 'University Tech Symposium 2024' },
-                ].map(({ icon, title, detail }) => (
+                {achievements.map(({ icon, title, description }) => (
                   <div key={title} className="flex items-center gap-4 p-4 glass-card group hover:border-yellow-500/20 transition-colors">
                     <span className="text-2xl">{icon}</span>
                     <div>
                       <div className="text-sm font-semibold text-white">{title}</div>
-                      <div className="text-xs text-text-secondary">{detail}</div>
+                      <div className="text-xs text-text-secondary">{description}</div>
                     </div>
                   </div>
                 ))}
